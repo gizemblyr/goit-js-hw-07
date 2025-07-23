@@ -12,3 +12,25 @@ body {
   color: #212121;
   line-height: 1.5;
 }
+.gallery {
+  display: flex;
+  flex-wrap: wrap;         /* satır satır yerleştir */
+  gap: 16px;               /* aralarda boşluk */
+  list-style: none;        /* madde işaretlerini kaldır */
+  padding: 0;
+  justify-content: center; /* ortala */
+}
+
+.gallery li {
+  flex-basis: calc(33.333% - 16px); /* 3'lü grid gibi görünmesi için */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* görsel güzelleştirme */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
