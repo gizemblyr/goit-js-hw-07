@@ -25,14 +25,15 @@ const images = [
   },
 ];
 
-const ul = document.querySelector("ul");
 
-images.forEach((element) => {
-  const li = document.createElement("li");
-  const img = document.createElement("img");
+const gallery = document.querySelector(".gallery");
 
-  img.src = element.url;
-  img.alt = element.alt;
-  li.append(img);
-  ul.append(li);
-});
+
+const markup = images
+  .map(
+    (image) => `<li><img src="${image.url}" alt="${image.alt}" /></li>`
+  )
+  .join("");
+
+
+gallery.innerHTML = markup;
