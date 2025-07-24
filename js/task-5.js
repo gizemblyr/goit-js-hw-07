@@ -11,6 +11,6 @@ const span = document.querySelector(".color");
 
 button.addEventListener("click", () => {
   const newColor = getRandomHexColor(); // Yeni renk oluştur
-  body.style.backgroundColor = newColor; // Body'nin arka planını değiştir
+  body.style.backgroundColor = newColor; // Bodynin arka planını değiştir
   span.textContent = newColor; // Renk kodunu span içine yaz
 });
